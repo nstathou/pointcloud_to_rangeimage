@@ -79,21 +79,12 @@ public:
     _newmsg(false),
     _laser_frame(true),
     _init(false),
-<<<<<<< HEAD
     _ang_res_x(1),
     _ang_res_y(1),
     _max_ang_w(360),
     _max_ang_h(45),
     _min_range(0.3),
     _max_range(100),
-=======
-    _ang_res_x(0.5),
-    _ang_res_y(0.7),
-    _max_ang_w(360.),
-    _max_ang_h(360.),
-    _min_range(0.5),
-    _max_range(50),
->>>>>>> 7e168a81072c072b42671bcf82c73d66b3730b79
     nh_("~"),
     it_(nh_)
   {
@@ -147,11 +138,7 @@ public:
 
     image_transport::TransportHints transportHint(transport);
 
-<<<<<<< HEAD
     std::string image_in = "/pointcloud_to_rangeimage/image_out";
-=======
-    std::string image_in = "image_in";
->>>>>>> 7e168a81072c072b42671bcf82c73d66b3730b79
     nh_.param("image_in", image_in, image_in);
     sub_ = it_.subscribe(image_in, 1, &PointCloudConverter::callback, this, transportHint);
 

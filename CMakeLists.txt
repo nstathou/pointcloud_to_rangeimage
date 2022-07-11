@@ -55,22 +55,9 @@ target_link_libraries(pointcloud_to_rangeimage_node
 )
 
 ## Declare a cpp executable
-<<<<<<< HEAD
 add_executable(pointcloud_to_rangeimage_node2 src/pointcloud_to_rangeimage_node2.cpp)
 add_dependencies(pointcloud_to_rangeimage_node2 ${PROJECT_NAME}_gencfg pointcloud_to_rangeimage_generate_messages_cpp)
 target_link_libraries(pointcloud_to_rangeimage_node2
-   ${catkin_LIBRARIES}
-   ${PCL_LIBRARIES}
-   ${OpenCV_LIBRARIES}
-   ${Boost_LIBRARIES}
-)
-
-## Declare a cpp executable
-=======
->>>>>>> 7e168a81072c072b42671bcf82c73d66b3730b79
-add_executable(rangeimage_to_pointcloud_node src/rangeimage_to_pointcloud_node.cpp)
-add_dependencies(rangeimage_to_pointcloud_node ${PROJECT_NAME}_gencfg pointcloud_to_rangeimage_generate_messages_cpp)
-target_link_libraries(rangeimage_to_pointcloud_node
    ${catkin_LIBRARIES}
    ${PCL_LIBRARIES}
    ${OpenCV_LIBRARIES}
