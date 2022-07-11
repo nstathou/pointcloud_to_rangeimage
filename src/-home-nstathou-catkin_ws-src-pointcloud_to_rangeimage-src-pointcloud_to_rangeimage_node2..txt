@@ -1,1 +1,0 @@
-/home/nstathou/catkin_ws/src/pointcloud_to_rangeimage/src/pointcloud_to_rangeimage_node2.cpp

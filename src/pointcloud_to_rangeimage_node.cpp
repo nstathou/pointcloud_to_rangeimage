@@ -78,21 +78,12 @@ public:
     _newmsg(false),
     _rgb_range_img(false),
     _laser_frame(true),
-<<<<<<< HEAD
     _ang_res_x(0.8),
     _ang_res_y(1.3),
     _max_ang_w(360),
     _max_ang_h(30),
     _min_range(0.3),
     _max_range(100),
-=======
-    _ang_res_x(0.5),
-    _ang_res_y(0.7),
-    _max_ang_w(360.),
-    _max_ang_h(360.),
-    _min_range(0.5),
-    _max_range(50),
->>>>>>> 7e168a81072c072b42671bcf82c73d66b3730b79
     nh_("~"),
     it_(nh_)
   {
@@ -132,11 +123,7 @@ public:
     pub_ = it_.advertise("image_out", 1);
 
     ros::NodeHandle nh;
-<<<<<<< HEAD
     sub_ = nh.subscribe<PointCloud>("/velodyne_points", 1, &RangeImageConverter::callback, this);
-=======
-    sub_ = nh.subscribe<PointCloud>("point_cloud_in", 1, &RangeImageConverter::callback, this);
->>>>>>> 7e168a81072c072b42671bcf82c73d66b3730b79
 
     _frame = (_laser_frame)? pcl::RangeImage::LASER_FRAME : pcl::RangeImage::CAMERA_FRAME;
   }
